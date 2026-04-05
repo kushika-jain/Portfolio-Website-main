@@ -1,0 +1,210 @@
+.landing-section {
+  width: 100%;
+  position: relative;
+  height: 100svh;
+  /* Lock strictly to viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+}
+
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bg-glow.top-left {
+  width: 400px;
+  height: 400px;
+  background-color: var(--bg-secondary);
+  top: -100px;
+  left: -100px;
+}
+
+.bg-glow.bottom-right {
+  width: 500px;
+  height: 500px;
+  background-color: var(--accentColor);
+  bottom: -150px;
+  right: -100px;
+  opacity: 0.3;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--border-color); /* Theme-aware soft background */
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.hero-tag span {
+  color: var(--text-dark); /* Using text-dark for maximum legibility */
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--text-dark);
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  color: var(--text-medium);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 auto 15px auto;
+  max-width: 550px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cardBg); /* Switched from backgroundColor to cardBg for better contrast */
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  padding: 12px 30px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.hero-cta .arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: var(--text-dark);
+  color: var(--backgroundColor);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.hero-cta:hover .arrow {
+  transform: translateX(4px);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: var(--text-medium);
+  color: var(--backgroundColor);
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--text-dark);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.hero-portrait-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 650px;
+  /* Increased from 600px */
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translateY(-20px);
+  /* Pull it up explicitly */
+}
+
+.hero-portrait {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  /* Very big maximum height */
+  object-fit: contain;
+  object-position: bottom;
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: multiply; /* Removes white background magic */
+  filter: drop-shadow(0 20px 40px var(--shadow-color));
+}
+
+.hero-circle-decoration {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accentColor) 0%, transparent 65%);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(60px);
+  opacity: 0.5;
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.45; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 0.6; }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 55px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-title {
+    font-size: 65px;
+  }
+}

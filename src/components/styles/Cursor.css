@@ -1,0 +1,35 @@
+.cursor-main {
+  --size: 24px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  z-index: 9999;
+  background-color: var(--accentColor);
+  
+  /* Floral Mask */
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="black"><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(0 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(72 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(144 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(216 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="10"/></g></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="black"><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(0 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(72 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(144 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(216 50 50)"/><path d="M50 50 Q70 10 90 50 Q70 90 50 50" transform="rotate(288 50 50)"/><circle cx="50" cy="50" r="10"/></g></svg>') center/contain no-repeat;
+  
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, transform 0.1s linear;
+}
+
+.cursor-icons {
+  --size: 48px;
+  background-color: var(--text-dark);
+  opacity: 0.8;
+}
+
+.cursor-disable {
+  --size: 0px;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .cursor-main {
+    display: none;
+  }
+}
+

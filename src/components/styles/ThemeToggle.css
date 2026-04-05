@@ -1,0 +1,64 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 65px;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+  padding: 4px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.theme-toggle.dark {
+  border-color: var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.toggle-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--backgroundColor);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-toggle.dark .toggle-thumb {
+  transform: translateX(32px); /* Moves it exactly to the right edge smoothly */
+  background-color: var(--accentColor); /* Distinctive color for dark mode thumb */
+  color: var(--backgroundColor); /* Icon color */
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.sun {
+  animation: rotateSun 10s linear infinite;
+}
+
+.moon {
+  animation: wobbleMoon 3s ease-in-out infinite;
+}
+
+@keyframes rotateSun {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wobbleMoon {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}

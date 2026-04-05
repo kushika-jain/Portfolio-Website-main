@@ -1,0 +1,453 @@
+:root {
+  --bistre: #1B100E;
+  --ivory: #FDF9F2;
+  --lion: #C7A07A;
+  --charcoal: #2A2A2A;
+  --white: #FFFFFF;
+}
+
+.detailed-about-page.elite-editorial {
+  background-color: var(--ivory);
+  color: var(--bistre);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+.container-elite {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serif-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.elite-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--lion);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.elite-mask {
+  overflow: hidden;
+  position: relative;
+}
+
+.elite-inner {
+  display: block;
+}
+
+/* 1. ELITE HERO (Asymmetrical) */
+.section-elite-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.elite-hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.h1-mask h1 {
+  font-size: 100px;
+  line-height: 0.95;
+  margin-bottom: 40px;
+}
+
+.h1-mask h1 span {
+  color: var(--lion);
+  font-style: italic;
+}
+
+.elite-hero-bio {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 550px;
+  color: var(--charcoal);
+  opacity: 0.9;
+}
+
+.asymmetric-image-frame {
+  position: relative;
+  width: 100%;
+  padding-bottom: 140%;
+  background-color: var(--lion);
+  border-radius: 4px;
+}
+
+.asymmetric-image-frame img {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 40px 80px rgba(27, 16, 14, 0.2);
+}
+
+.frame-decoration {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background-color: var(--ivory);
+  border: 1px solid var(--lion);
+  z-index: 10;
+}
+
+/* 2. ELITE TIMELINE (The Chronicle) */
+.section-elite-timeline {
+  padding: 100px 0;
+}
+
+.section-title-mask h2 {
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.vertical-timeline {
+  position: relative;
+  max-width: 800px;
+  padding-left: 60px;
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--lion);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -64px;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  background-color: var(--lion);
+  border-radius: 50%;
+}
+
+.dot-lion {
+  width: 15px;
+  height: 15px;
+  left: -67px;
+  background-color: var(--lion);
+  box-shadow: 0 0 15px var(--lion);
+}
+
+.timeline-year {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--lion);
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  color: var(--charcoal);
+}
+
+.margin-bottom-medium {
+  margin-bottom: 50px;
+}
+
+.margin-bottom-large {
+  margin-bottom: 100px;
+}
+
+/* 3. THE SYNERGY (Technical vs UI) */
+.section-elite-synergy {
+  padding: 80px 0 100px;
+}
+
+.synergy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.synergy-pillar {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.pillar-icon {
+  font-size: 32px;
+  color: var(--lion);
+}
+
+.synergy-pillar h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.synergy-pillar p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 40px;
+  opacity: 0.85;
+}
+
+.pillar-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pillar-list li {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--bistre);
+  display: flex;
+  align-items: center;
+}
+
+.pillar-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--lion);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.divider-pillar {
+  width: 1px;
+  height: 100%;
+  background-color: var(--lion);
+  opacity: 0.2;
+}
+
+/* 4. ELITE SERVICE GRID (Solutions) */
+
+.elite-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.service-card {
+  padding: 60px 40px;
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 1px solid rgba(199, 160, 122, 0.1);
+  transition: all 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--lion);
+  box-shadow: 0 30px 60px rgba(199, 160, 122, 0.1);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: var(--lion);
+  margin-bottom: 40px;
+}
+
+.service-card h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* 4. ELITE VOCALIST (Immersive Reveal) */
+.singer-elite-section {
+  padding: 120px 0;
+  background-color: var(--bistre);
+  color: var(--ivory);
+}
+
+.singer-flex {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.singer-elite-visual {
+  flex: 1;
+}
+
+.elite-image-mask {
+  position: relative;
+  width: 100%;
+  padding-bottom: 120%;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.masked-singer-img {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+}
+
+.mask-caption {
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: var(--lion);
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.singer-elite-text {
+  flex: 1;
+}
+
+.quote-icon-elite {
+  font-size: 50px;
+  color: var(--lion);
+  margin-bottom: 40px;
+  opacity: 0.5;
+}
+
+.singer-elite-text h2 {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.singer-elite-text h2 span {
+  font-style: italic;
+  color: var(--lion);
+}
+
+.singer-elite-text p {
+  font-size: 22px;
+  line-height: 1.8;
+  max-width: 500px;
+  opacity: 0.8;
+  margin-bottom: 60px;
+}
+
+.elite-signature {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 12px;
+  color: var(--lion);
+  padding-top: 40px;
+  border-top: 1px solid rgba(199, 160, 122, 0.2);
+  display: inline-block;
+}
+
+/* 5. ELITE FOOTER */
+.footer-elite {
+  padding: 100px 0 80px;
+}
+
+.footer-accent-line {
+  height: 2px;
+  background-color: var(--lion);
+  width: 100px;
+  margin-bottom: 60px;
+}
+
+.footer-content-elite {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-callout h3 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-callout p {
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.elite-cta-circle {
+  width: 180px;
+  height: 180px;
+  border: 1px solid var(--lion);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--bistre);
+  transition: all 0.4s ease;
+  line-height: 1.2;
+}
+
+.elite-cta-circle:hover {
+  background-color: var(--lion);
+  color: var(--ivory);
+  transform: scale(1.1);
+}
+
+.elite-cta-circle svg {
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  .elite-hero-grid { grid-template-columns: 1fr; gap: 80px; }
+  .h1-mask h1 { font-size: 75px; }
+  .elite-service-grid { grid-template-columns: 1fr; }
+  .singer-flex { flex-direction: column; gap: 80px; }
+  .section-title-mask h2 { font-size: 50px; }
+}
+
+@media screen and (max-width: 768px) {
+  .h1-mask h1 { font-size: 50px; }
+  .elite-hero-bio { font-size: 20px; }
+  .footer-content-elite { flex-direction: column; align-items: flex-start; gap: 60px; }
+}
