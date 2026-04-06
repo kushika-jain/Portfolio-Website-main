@@ -59,12 +59,18 @@
   font-weight: 500;
   font-size: 15px;
   text-decoration: none;
-  transition: opacity 0.2s ease;
-  opacity: 0.8;
+  transition: opacity 0.2s ease, color 0.3s ease;
+  opacity: 0.6;
 }
 
-.navbar-links li a:hover {
+.navbar-links li a:hover,
+.navbar-links li a.active-link {
   opacity: 1;
+}
+
+.navbar-links li a.active-link .hover-in {
+  color: var(--accentColor);
+  font-weight: 800;
 }
 
 .navbar-action .btn-primary {

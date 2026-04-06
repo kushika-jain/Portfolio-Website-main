@@ -1,12 +1,14 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import HoverLinks from "./HoverLinks";
 import "./styles/Navbar.css";
 
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("home");
 
   useGSAP(() => {
     // Spring bouncy animation for the pill
@@ -19,6 +21,39 @@ const Navbar = () => {
     });
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // If we are on a different page (like about-detailed), we handle it separately
+      if (location.pathname === "/about-detailed") {
+        setActiveSection("about");
+        return;
+      }
+      
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      let current = "home"; // default
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If the section's top is near the top of the viewport (with some offset)
+          if (rect.top <= 250 && rect.bottom >= 250) {
+            current = section;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    // Run on mount and on scroll
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname]);
+
   return (
     <div className="navbar-container" ref={navRef}>
       <div className="navbar-pill">
@@ -27,11 +62,11 @@ const Navbar = () => {
         </a>
         
         <ul className="navbar-links">
-          <li><Link to="/"><HoverLinks text="Home" /></Link></li>
-          <li><Link to="/about-detailed"><HoverLinks text="About" /></Link></li>
-          <li><a href="/#skills"><HoverLinks text="Skills" /></a></li>
-          <li><a href="/#projects"><HoverLinks text="Projects" /></a></li>
-          <li><a href="/#contact"><HoverLinks text="Contact" /></a></li>
+          <li><Link to="/" className={activeSection === "home" ? "active-link" : ""}><HoverLinks text="Home" /></Link></li>
+          <li><Link to="/about-detailed" className={activeSection === "about" ? "active-link" : ""}><HoverLinks text="About" /></Link></li>
+          <li><a href="/#skills" className={activeSection === "skills" ? "active-link" : ""}><HoverLinks text="Skills" /></a></li>
+          <li><a href="/#projects" className={activeSection === "projects" ? "active-link" : ""}><HoverLinks text="Projects" /></a></li>
+          <li><a href="/#contact" className={activeSection === "contact" ? "active-link" : ""}><HoverLinks text="Contact" /></a></li>
         </ul>
 
         <div className="navbar-action">

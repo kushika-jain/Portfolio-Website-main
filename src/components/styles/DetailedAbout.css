@@ -451,3 +451,92 @@
   .elite-hero-bio { font-size: 20px; }
   .footer-content-elite { flex-direction: column; align-items: flex-start; gap: 60px; }
 }
+
+/* --- DARK MODE OVERRIDES --- */
+[data-theme="dark"] .detailed-about-page.elite-editorial {
+  background-color: var(--backgroundColor);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .elite-hero-bio,
+[data-theme="dark"] .detailed-about-page.elite-editorial .timeline-content p,
+[data-theme="dark"] .detailed-about-page.elite-editorial .synergy-pillar p,
+[data-theme="dark"] .detailed-about-page.elite-editorial .service-card p,
+[data-theme="dark"] .detailed-about-page.elite-editorial .singer-elite-text p,
+[data-theme="dark"] .detailed-about-page.elite-editorial .footer-callout p {
+  color: var(--text-medium);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .elite-label,
+[data-theme="dark"] .detailed-about-page.elite-editorial .h1-mask h1 span,
+[data-theme="dark"] .detailed-about-page.elite-editorial .timeline-year,
+[data-theme="dark"] .detailed-about-page.elite-editorial .pillar-icon,
+[data-theme="dark"] .detailed-about-page.elite-editorial .service-icon,
+[data-theme="dark"] .detailed-about-page.elite-editorial .quote-icon-elite,
+[data-theme="dark"] .detailed-about-page.elite-editorial .singer-elite-text h2 span,
+[data-theme="dark"] .detailed-about-page.elite-editorial .mask-caption {
+  color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .vertical-timeline::before,
+[data-theme="dark"] .detailed-about-page.elite-editorial .timeline-dot,
+[data-theme="dark"] .detailed-about-page.elite-editorial .divider-pillar,
+[data-theme="dark"] .detailed-about-page.elite-editorial .footer-accent-line {
+  background-color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .dot-lion {
+  background-color: var(--accentColor);
+  box-shadow: 0 0 15px var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .asymmetric-image-frame {
+  background-color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .asymmetric-image-frame img {
+  box-shadow: 0 40px 80px var(--shadow-color);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .frame-decoration {
+  background-color: var(--backgroundColor);
+  border-color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .pillar-list li {
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .pillar-list li::before {
+  background-color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .service-card {
+  background-color: var(--cardBg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .service-card:hover {
+  border-color: var(--accentColor);
+  box-shadow: 0 30px 60px var(--shadow-color);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .singer-elite-section {
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .elite-signature {
+  color: var(--accentColor);
+  border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .elite-cta-circle {
+  color: var(--text-dark);
+  border-color: var(--accentColor);
+}
+
+[data-theme="dark"] .detailed-about-page.elite-editorial .elite-cta-circle:hover {
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+}

@@ -123,7 +123,7 @@ const DetailedAbout = () => {
             <div className="timeline-year">Curiosity</div>
             <div className="timeline-content">
               <h3>The Spark</h3>
-              <p>My journey started with curiosity — wondering how websites are built and operated. Learning HTML and CSS slowly turned that curiosity into a genuine interest in development.</p>
+              <p>It began with a simple fascination for the digital world—deconstructing how the web silently operates. Mastering foundational languages transformed that passive curiosity into an active obsession for frontend architecture.</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -131,7 +131,7 @@ const DetailedAbout = () => {
             <div className="timeline-year">Discovery</div>
             <div className="timeline-content">
               <h3>Designing the Experience</h3>
-              <p>I explored tools like Figma for wireframing and prototyping. This helped me understand how to map out designs that are practical, attractive, and deeply user-friendly.</p>
+              <p>To bridge the gap between imagination and reality, I immersed myself in Figma. I realized that great design isn't just visual; it's psychological. I began mapping out interfaces that are both captivating and inherently intuitive.</p>
             </div>
           </div>
           <div className="timeline-item highlight">
@@ -139,7 +139,7 @@ const DetailedAbout = () => {
             <div className="timeline-year">Execution</div>
             <div className="timeline-content">
               <h3>Bringing Ideas to Life</h3>
-              <p>I began building real projects, like a responsive news website and an instrument rental platform, continuously bridging the gap between design and functional frontend development.</p>
+              <p>Theory transitioned into practice as I developed live platforms—from dynamic news interfaces to complex rental systems. Today, my focus is strictly on executing flawless integrations of aesthetic design and clean code.</p>
             </div>
           </div>
         </div>
@@ -201,17 +201,17 @@ const DetailedAbout = () => {
             <div className="service-card about-fade-in">
               <FaSeedling className="service-icon" />
               <h3>Currently Growing</h3>
-              <p>Focusing on improving my frontend development skills, learning advanced UI/UX concepts, and constantly exploring meaningful design trends.</p>
+              <p>Actively pushing the boundaries of my technical stack, mastering advanced React concepts, and dissecting cutting-edge UI/UX patterns to build next-generation scalable web applications.</p>
             </div>
             <div className="service-card about-fade-in">
               <FaBullseye className="service-icon" />
               <h3>My Goal</h3>
-              <p>Aiming to become a highly skilled UI/UX designer and frontend developer. I’m always open to learning, collaborating, and growing through new projects.</p>
+              <p>To bridge the ultimate divide between designer and engineer—evolving into a holistic developer who can architect, design, and code world-class digital experiences entirely from scratch.</p>
             </div>
             <div className="service-card about-fade-in">
               <FaHeart className="service-icon" />
               <h3>Personal Pursuits</h3>
-              <p>When I’m not designing or coding, you’ll find me exploring fresh design inspirations and trying out creative ideas that help me improve personally.</p>
+              <p>Beyond the code editor, I am deeply engrossed in analyzing visual arts, studying structural design, and cultivating creative disciplines that ultimately feed back into my digital craft.</p>
             </div>
           </div>
         </div>

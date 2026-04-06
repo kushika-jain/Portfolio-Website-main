@@ -57,8 +57,8 @@ const Contact = () => {
           <div className="contact-right contact-animate">
             <div className="contact-image-wrapper">
               <img src="/images/about.png" alt="Profile" className="contact-profile-img" />
-              <div className="contact-badge">
-                <p>Open to <br/> Work</p>
+              <div className="contact-badge chat-bubble">
+                <p>Hello! ✨</p>
               </div>
             </div>
 
