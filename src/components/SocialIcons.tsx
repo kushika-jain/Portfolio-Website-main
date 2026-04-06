@@ -2,11 +2,9 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { useEffect } from "react";
-import HoverLinks from "./HoverLinks";
 
 const SocialIcons = () => {
   useEffect(() => {
