@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import HoverLinks from "./HoverLinks";
 import "./styles/Navbar.css";
 
@@ -9,6 +10,11 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const [activeSection, setActiveSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   useGSAP(() => {
     // Spring bouncy animation for the pill
@@ -60,19 +66,27 @@ const Navbar = () => {
         <a href="/#" className="navbar-logo">
           <img src="/images/logo copy.png" alt="Logo" className="navbar-logo-img" />
         </a>
-        
-        <ul className="navbar-links">
-          <li><Link to="/" className={activeSection === "home" ? "active-link" : ""}><HoverLinks text="Home" /></Link></li>
-          <li><Link to="/about-detailed" className={activeSection === "about" ? "active-link" : ""}><HoverLinks text="About" /></Link></li>
-          <li><a href="/#skills" className={activeSection === "skills" ? "active-link" : ""}><HoverLinks text="Skills" /></a></li>
-          <li><a href="/#projects" className={activeSection === "projects" ? "active-link" : ""}><HoverLinks text="Projects" /></a></li>
-          <li><a href="/#contact" className={activeSection === "contact" ? "active-link" : ""}><HoverLinks text="Contact" /></a></li>
+        <ul className={`navbar-links ${isMobileMenuOpen ? "mobile-active" : ""}`}>
+          <li><Link to="/" onClick={closeMobileMenu} className={activeSection === "home" ? "active-link" : ""}><HoverLinks text="Home" /></Link></li>
+          <li><Link to="/about-detailed" onClick={closeMobileMenu} className={activeSection === "about" ? "active-link" : ""}><HoverLinks text="About" /></Link></li>
+          <li><a href="/#skills" onClick={closeMobileMenu} className={activeSection === "skills" ? "active-link" : ""}><HoverLinks text="Skills" /></a></li>
+          <li><a href="/#projects" onClick={closeMobileMenu} className={activeSection === "projects" ? "active-link" : ""}><HoverLinks text="Projects" /></a></li>
+          <li><a href="/#contact" onClick={closeMobileMenu} className={activeSection === "contact" ? "active-link" : ""}><HoverLinks text="Contact" /></a></li>
         </ul>
 
-        <div className="navbar-action">
-          <a href="https://drive.google.com/uc?export=download&id=1r7OZQsYYri9NPO8gKjzxq5WxbFLzHiww" className="btn-primary" target="_blank" rel="noreferrer">
-            Download CV
-          </a>
+        <div className="navbar-action-group" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div className="navbar-action">
+            <a href="https://drive.google.com/uc?export=download&id=1r7OZQsYYri9NPO8gKjzxq5WxbFLzHiww" className="btn-primary" target="_blank" rel="noreferrer">
+              Download CV
+            </a>
+          </div>
+
+          <div 
+            className="hamburger-icon" 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </div>
         </div>
       </div>
     </div>

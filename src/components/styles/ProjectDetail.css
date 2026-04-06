@@ -88,6 +88,11 @@
   .pd-image-section {
     flex: 1;
   }
+
+  .pd-info-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 .pd-main-image {

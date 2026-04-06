@@ -208,3 +208,25 @@
     font-size: 65px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .landing-section {
+    padding-top: 100px;
+  }
+  .hero-circle-decoration {
+    width: 300px;
+    height: 300px;
+    filter: blur(40px);
+  }
+  .bg-glow.top-left {
+    width: 250px;
+    height: 250px;
+  }
+  .bg-glow.bottom-right {
+    width: 250px;
+    height: 250px;
+  }
+  .hero-portrait {
+    max-height: 55vh;
+  }
+}

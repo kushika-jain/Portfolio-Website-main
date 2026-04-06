@@ -444,12 +444,18 @@
   .elite-service-grid { grid-template-columns: 1fr; }
   .singer-flex { flex-direction: column; gap: 80px; }
   .section-title-mask h2 { font-size: 50px; }
+  .synergy-grid { grid-template-columns: 1fr; gap: 50px; }
+  .divider-pillar { display: none; }
 }
 
 @media screen and (max-width: 768px) {
   .h1-mask h1 { font-size: 50px; }
   .elite-hero-bio { font-size: 20px; }
-  .footer-content-elite { flex-direction: column; align-items: flex-start; gap: 60px; }
+  .footer-content-elite { flex-direction: column; align-items: flex-start; gap: 40px; }
+  .vertical-timeline { padding-left: 30px; }
+  .timeline-dot { left: -34px; }
+  .dot-lion { left: -37px; }
+  .pillar-list { grid-template-columns: 1fr; }
 }
 
 /* --- DARK MODE OVERRIDES --- */

@@ -91,8 +91,45 @@
   box-shadow: 0 4px 15px rgba(115, 65, 40, 0.2);
 }
 
+.hamburger-icon {
+  display: flex;
+  font-size: 24px;
+  color: var(--text-dark);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-icon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 899px) {
+  .navbar-links.mobile-active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--navbarBg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px 0;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    gap: 20px;
+    align-items: center;
+    pointer-events: auto;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .navbar-links {
     display: flex;
+  }
+  .hamburger-icon {
+    display: none;
   }
 }
